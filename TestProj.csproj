@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>3021;1701;1702</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Antlr4.Runtime.Standard" Version="4.9.0" />
+    <PackageReference Include="Antlr4BuildTasks" Version="8.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Antlr4 Include="*.g4">
+      <!-- https://github.com/kaby76/Antlr4BuildTasks#setting-arguments-to-the-antlr-tool -->
+      <Error>true</Error>
+      <Listener>true</Listener>
+      <Visitor>true</Visitor>
+    </Antlr4>
+  </ItemGroup>
+
+</Project>

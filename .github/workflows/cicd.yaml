@@ -1,0 +1,85 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-2019, ubuntu-18.04, ubuntu-20.04]
+
+    defaults:
+      run:
+        shell: pwsh
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+
+      - name: .NET Restore
+        run: dotnet restore
+      
+      - name: Dump environment
+        run: 
+          echo 'OS Version:'
+          [Environment]::OSVersion
+
+          echo 'Environment variables:'
+          dir env:*
+
+      - name: /usr/bin/java tests
+        if: matrix.os != 'windows-2019'
+        run: |
+          $ErrorActionPreference = 'Continue'
+          if (Test-Path /usr/bin/java -PathType Container) {
+            echo 'Contents of /usr/bin/java:'
+            ls /usr/bin/java
+          } elseif (Test-Path /usr/bin/java -PathType Leaf) {
+            echo '/usr/bin/java -version'
+            /usr/bin/java -version
+          } else {
+            Write-Error '/usr/bin/java does not exist.'
+          }
+          exit 0
+
+      - name: $JAVA_HOME tests
+        run: |
+          $ErrorActionPreference = 'Continue'
+          echo "`$env:JAVA_HOME = '$env:JAVA_HOME'"
+          if ($env:JAVA_HOME -AND (Test-Path $env:JAVA_HOME)) {
+            echo '$env:JAVA_HOME/bin/java -version'
+            & $env:JAVA_HOME/bin/java -version
+          } else {
+            Write-Error '$env:JAVA_HOME does not exist.'
+          }
+          exit 0
+
+      - name: Use System.Uri to locate jar file
+        if: matrix.os != 'windows-2019'
+        run: |
+          $ErrorActionPreference = 'Continue'
+          $buildPath = '~/.nuget/packages/antlr4buildtasks/*/build'
+          $buildDir = dir $buildPath | select -last 1 -exp FullName
+          if ($buildDir) {
+            $jarPath = dir $buildDir/antlr-*-complete.jar | select -first 1 -exp FullName
+            $uri = [uri]"file:///$($jarPath.Replace('\', '/'))"
+            $uri | Out-String
+            "Uri.LocalPath exists? $(Test-Path $uri.LocalPath)"
+            "Uri.AbsolutePath exists? $(Test-Path $uri.AbsolutePath)"
+          } else {
+            echo "$buildPath does not exist."
+          }
+
+      - name: .NET Build
+        run: dotnet build --no-restore --verbosity detailed
+      
