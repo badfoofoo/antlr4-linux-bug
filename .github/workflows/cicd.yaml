@@ -8,12 +8,17 @@ on:
       - '**'
   workflow_dispatch:
 
+env:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true # Stop wasting time caching packages
+  DOTNET_CLI_TELEMETRY_OPTOUT: true       # Disable sending usage data to Microsoft
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false # dont fail all builds after first failure
       matrix:
-        os: [windows-2019, ubuntu-18.04, ubuntu-20.04]
+        os: [windows-latest, ubuntu-latest, macos-latest]
 
     defaults:
       run:
@@ -23,63 +28,90 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
+      #- name: Setup .NET
+      #  uses: actions/setup-dotnet@v1
 
       - name: .NET Restore
-        run: dotnet restore
+        run: dotnet restore # --verbosity detailed
       
+      - name: .NET Build
+        run: dotnet build --no-restore --verbosity detailed
+
       - name: Dump environment
-        run: 
+        if: always()
+        run: |
           echo 'OS Version:'
           [Environment]::OSVersion
 
           echo 'Environment variables:'
-          dir env:*
+          dir env:* | select Name,Value | sort-object Name | format-table
 
       - name: /usr/bin/java tests
-        if: matrix.os != 'windows-2019'
+        if: always()
         run: |
-          $ErrorActionPreference = 'Continue'
-          if (Test-Path /usr/bin/java -PathType Container) {
-            echo 'Contents of /usr/bin/java:'
-            ls /usr/bin/java
-          } elseif (Test-Path /usr/bin/java -PathType Leaf) {
-            echo '/usr/bin/java -version'
-            /usr/bin/java -version
-          } else {
-            Write-Error '/usr/bin/java does not exist.'
+          if ([Environment]::OSVersion.Platform -like 'Win*') { 
+            echo 'Skipped: Windows OS.'
+            exit 0
           }
-          exit 0
+
+          if (!(Test-Path /usr/bin/java)) {
+            echo '::error::/usr/bin/java does not exist.'
+            exit 1
+          }
+          
+          echo '/usr/bin/java -version'
+          /usr/bin/java -version
 
       - name: $JAVA_HOME tests
+        if: always()
         run: |
-          $ErrorActionPreference = 'Continue'
           echo "`$env:JAVA_HOME = '$env:JAVA_HOME'"
-          if ($env:JAVA_HOME -AND (Test-Path $env:JAVA_HOME)) {
-            echo '$env:JAVA_HOME/bin/java -version'
-            & $env:JAVA_HOME/bin/java -version
-          } else {
-            Write-Error '$env:JAVA_HOME does not exist.'
+          if (!$env:JAVA_HOME -OR !(Test-Path $env:JAVA_HOME)) {
+            echo '::error::$env:JAVA_HOME does not exist.'
+            exit 1
           }
-          exit 0
+          
+          echo '$env:JAVA_HOME/bin/java -version'
+          & $env:JAVA_HOME/bin/java -version
 
       - name: Use System.Uri to locate jar file
-        if: matrix.os != 'windows-2019'
+        if: always()
         run: |
-          $ErrorActionPreference = 'Continue'
           $buildPath = '~/.nuget/packages/antlr4buildtasks/*/build'
           $buildDir = dir $buildPath | select -last 1 -exp FullName
-          if ($buildDir) {
-            $jarPath = dir $buildDir/antlr-*-complete.jar | select -first 1 -exp FullName
-            $uri = [uri]"file:///$($jarPath.Replace('\', '/'))"
-            $uri | Out-String
-            "Uri.LocalPath exists? $(Test-Path $uri.LocalPath)"
-            "Uri.AbsolutePath exists? $(Test-Path $uri.AbsolutePath)"
-          } else {
-            echo "$buildPath does not exist."
+          if (!$buildDir) {
+            echo "::error::$buildPath does not exist!"
+            exit 1
           }
 
-      - name: .NET Build
-        run: dotnet build --no-restore --verbosity detailed
+          $jarPath = dir $buildDir/antlr-*-complete.jar | select -first 1 -exp FullName
+          if (!$jarPath) {
+            echo "::error::antlr-*-complete.jar not found in $buildDir!"
+            exit 1
+          }
+
+          echo "Ok, we know for certain that the file exists at $jarPath."
+
+          # Emulates the code https://github.com/kaby76/Antlr4BuildTasks/blob/master/Antlr4BuildTasks/GetAntlrJar.cs
+          $uri = [uri]"file:///$($jarPath.Replace('\', '/'))"
+
+          echo $uri
+          echo "Uri.LocalPath exists? $([IO.File]::Exists($uri.LocalPath))"
+          echo "Uri.AbsolutePath exists? $([IO.File]::Exists($uri.AbsolutePath))"
+
+          if (!([IO.File]::Exists($uri.LocalPath))) {
+            echo "::error::IO.File.Exists(uri.LocalPath) returned false!"
+            exit 1
+          }
+
+      - name: Proof that it can work
+        if: always()
+        run: |
+          $antlr = dir ~/.nuget/packages/antlr4buildtasks/*/build/antlr-*-complete.jar | select -last 1 -exp FullName
+          $g4Files = dir *.g4 | select -exp FullName
+          $outdir = Join-Path $pwd out/manual
+          $null = mkdir $outdir -Force
+          $cmd = "& '$env:JAVA_HOME/bin/java' -cp '$antlr' org.antlr.v4.Tool -depend -o $outdir -encoding UTF-8 -listener -visitor -Dlanguage=CSharp -Werror $g4Files"
+          echo "Executing: $cmd"
+          Invoke-Expression $cmd
       
