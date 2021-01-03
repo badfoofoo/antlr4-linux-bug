@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- The absolute path to the root of the repository. Includes the final backslash in the path. -->
+    <RepoRootDir>$([System.IO.Path]::GetFullPath("$(MSBuildThisFileDirectory)"))</RepoRootDir>
+    <ArtifactsDir>$(RepoRootDir)artifacts/</ArtifactsDir>
+    <BuildOutputDir>$(ArtifactsDir)builds/</BuildOutputDir>
+    <BaseOutputPath>$(BuildOutputDir)$(MSBuildProjectName)/bin</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(BuildOutputDir)$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+</Project>
