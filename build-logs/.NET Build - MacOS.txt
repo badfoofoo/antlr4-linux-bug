@@ -1,0 +1,610 @@
+2021-01-03T01:32:10.8259660Z ##[group]Run dotnet build --no-restore --verbosity detailed
+2021-01-03T01:32:10.8260540Z [36;1mdotnet build --no-restore --verbosity detailed[0m
+2021-01-03T01:32:10.8346920Z shell: /usr/local/bin/pwsh -command ". '{0}'"
+2021-01-03T01:32:10.8347400Z env:
+2021-01-03T01:32:10.8347820Z   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+2021-01-03T01:32:10.8348360Z   DOTNET_CLI_TELEMETRY_OPTOUT: true
+2021-01-03T01:32:10.8348770Z ##[endgroup]
+2021-01-03T01:32:11.4535230Z Microsoft (R) Build Engine version 16.8.0+126527ff1 for .NET
+2021-01-03T01:32:11.4536200Z Copyright (C) Microsoft Corporation. All rights reserved.
+2021-01-03T01:32:11.4536640Z 
+2021-01-03T01:32:11.5358250Z Build started 1/3/2021 1:32:11 AM.
+2021-01-03T01:32:11.5372950Z      0>Process = "/Users/runner/.dotnet/dotnet"
+2021-01-03T01:32:11.5384680Z        MSBuild executable path = "/Users/runner/.dotnet/sdk/5.0.101/MSBuild.dll"
+2021-01-03T01:32:11.5386810Z        Command line arguments = "/Users/runner/.dotnet/sdk/5.0.101/MSBuild.dll -maxcpucount -verbosity:m -consoleloggerparameters:Summary -verbosity:detailed"
+2021-01-03T01:32:11.5388960Z        Current directory = "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug"
+2021-01-03T01:32:11.5389660Z        MSBuild version = "16.8.0+126527ff1"
+2021-01-03T01:32:11.6157920Z        Resolving SDK 'Microsoft.NET.Sdk'...
+2021-01-03T01:32:11.6538120Z        Property reassignment: $(MSBuildProjectExtensionsPath)="/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/" (previous value: "obj/") at /Users/runner/.dotnet/sdk/5.0.101/Current/Microsoft.Common.props (56,5)
+2021-01-03T01:32:11.6652920Z        Property reassignment: $(MSBuildAllProjects)=";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props" (previous value: ";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props") at /Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props (4,5)
+2021-01-03T01:32:11.6717010Z        Property reassignment: $(TargetsForTfmSpecificContentInPackage)=";PackTool;_PackProjectToolValidation" (previous value: ";PackTool") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.PackProjectTool.props (15,5)
+2021-01-03T01:32:11.6724950Z        Property reassignment: $(NoWarn)="3021;1701;1702" (previous value: "1701;1702") at /Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj (8,5)
+2021-01-03T01:32:11.6757380Z        Property reassignment: $(PublishProfileImported)="false" (previous value: "true") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.ImportPublishProfile.targets (28,5)
+2021-01-03T01:32:11.6880800Z        Property reassignment: $(TargetPlatformVersion)="" (previous value: "0.0") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets (65,5)
+2021-01-03T01:32:11.6923720Z        Property reassignment: $(DefaultItemExcludes)=";bin\Debug\/**;obj/Debug//**" (previous value: ";bin\Debug\/**") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets (227,5)
+2021-01-03T01:32:11.6926230Z        Property reassignment: $(IntermediateOutputPath)="obj/Debug/netstandard2.0/" (previous value: "obj/Debug/") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets (245,5)
+2021-01-03T01:32:11.6928780Z        Property reassignment: $(OutputPath)="bin\Debug\netstandard2.0\" (previous value: "bin\Debug\") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets (246,5)
+2021-01-03T01:32:11.6952410Z        Property reassignment: $(_FrameworkVersionForImplicitDefine)="2_0" (previous value: "2.0") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.BeforeCommon.targets (182,5)
+2021-01-03T01:32:11.7140070Z        Property reassignment: $(TargetPlatformIdentifier)="Windows" (previous value: "") at /Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets (89,5)
+2021-01-03T01:32:11.7142800Z        Property reassignment: $(TargetPlatformVersion)="7.0" (previous value: "") at /Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets (90,5)
+2021-01-03T01:32:11.7278740Z        Property reassignment: $(_DebugSymbolsProduced)="true" (previous value: "false") at /Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets (150,5)
+2021-01-03T01:32:11.7280780Z        Property reassignment: $(_DocumentationFileProduced)="false" (previous value: "true") at /Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets (159,5)
+2021-01-03T01:32:11.7301620Z        Property reassignment: $(ProcessorArchitecture)="msil" (previous value: "") at /Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets (490,5)
+2021-01-03T01:32:11.7303410Z        Property reassignment: $(DelaySign)="" (previous value: "false") at /Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets (530,5)
+2021-01-03T01:32:11.7318020Z        Property reassignment: $(_SGenGenerateSerializationAssembliesConfig)="Auto" (previous value: "") at /Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets (3530,5)
+2021-01-03T01:32:11.7320580Z        Property reassignment: $(_SGenGenerateSerializationAssembliesConfig)="Off" (previous value: "Auto") at /Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets (3531,5)
+2021-01-03T01:32:11.7322380Z        Property reassignment: $(_TargetsThatPrepareProjectReferences)="
+2021-01-03T01:32:11.7323310Z              AssignProjectConfiguration;
+2021-01-03T01:32:11.7324160Z              _SplitProjectReferencesByFileExistence
+2021-01-03T01:32:11.7325700Z            " (previous value: "_SplitProjectReferencesByFileExistence") at /Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets (4596,5)
+2021-01-03T01:32:11.7355420Z        Property reassignment: $(MSBuildAllProjects)=";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props;/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets" (previous value: ";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props") at /Users/runner/.dotnet/sdk/5.0.101/NuGet.targets (46,5)
+2021-01-03T01:32:11.7374410Z        Property reassignment: $(MSBuildAllProjects)=";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props;/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets;/Users/runner/.dotnet/sdk/5.0.101/Current/Microsoft.Common.targets/ImportAfter/Microsoft.TestPlatform.ImportAfter.targets" (previous value: ";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props;/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets") at /Users/runner/.dotnet/sdk/5.0.101/Current/Microsoft.Common.targets/ImportAfter/Microsoft.TestPlatform.ImportAfter.targets (16,5)
+2021-01-03T01:32:11.7440880Z        Property reassignment: $(MSBuildAllProjects)=";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props;/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets;/Users/runner/.dotnet/sdk/5.0.101/Current/Microsoft.Common.targets/ImportAfter/Microsoft.TestPlatform.ImportAfter.targets;/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.targets" (previous value: ";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props;/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets;/Users/runner/.dotnet/sdk/5.0.101/Current/Microsoft.Common.targets/ImportAfter/Microsoft.TestPlatform.ImportAfter.targets") at /Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.targets (4,5)
+2021-01-03T01:32:11.7468400Z        Property reassignment: $(MSBuildAllProjects)=";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props;/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets;/Users/runner/.dotnet/sdk/5.0.101/Current/Microsoft.Common.targets/ImportAfter/Microsoft.TestPlatform.ImportAfter.targets;/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.targets;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets" (previous value: ";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props;/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets;/Users/runner/.dotnet/sdk/5.0.101/Current/Microsoft.Common.targets/ImportAfter/Microsoft.TestPlatform.ImportAfter.targets;/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.targets") at /Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets (13,5)
+2021-01-03T01:32:11.7474420Z        Property reassignment: $(BuildDependsOn)="
+2021-01-03T01:32:11.7475030Z        			Antlr4GetBuildDeps;
+2021-01-03T01:32:11.7475530Z        			Antlr4Compile;
+2021-01-03T01:32:11.7476140Z        			Antlr4CompileAddFilesGenerated;
+2021-01-03T01:32:11.7476710Z        			
+2021-01-03T01:32:11.7477040Z              BeforeBuild;
+2021-01-03T01:32:11.7477450Z              CoreBuild;
+2021-01-03T01:32:11.7477830Z              AfterBuild
+2021-01-03T01:32:11.7478150Z            
+2021-01-03T01:32:11.7478520Z        		" (previous value: "
+2021-01-03T01:32:11.7478920Z              BeforeBuild;
+2021-01-03T01:32:11.7479310Z              CoreBuild;
+2021-01-03T01:32:11.7479690Z              AfterBuild
+2021-01-03T01:32:11.7480420Z            ") at /Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets (99,3)
+2021-01-03T01:32:11.7481310Z        Property reassignment: $(CoreCompileDependsOn)="
+2021-01-03T01:32:11.7481940Z        			Antlr4GetBuildDeps;
+2021-01-03T01:32:11.7482380Z        			Antlr4Compile;
+2021-01-03T01:32:11.7483050Z        			Antlr4CompileAddFilesGenerated;
+2021-01-03T01:32:11.7484110Z        			;_ComputeNonExistentFileProperty;ResolveCodeAnalysisRuleSet
+2021-01-03T01:32:11.7485780Z        		" (previous value: ";_ComputeNonExistentFileProperty;ResolveCodeAnalysisRuleSet") at /Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets (108,3)
+2021-01-03T01:32:11.7487200Z        Property reassignment: $(CleanDependsOn)="
+2021-01-03T01:32:11.7487750Z        			CustomBeforeClean;
+2021-01-03T01:32:11.7488130Z        			
+2021-01-03T01:32:11.7488440Z              BeforeClean;
+2021-01-03T01:32:11.7488920Z              UnmanagedUnregistration;
+2021-01-03T01:32:11.7489400Z              CoreClean;
+2021-01-03T01:32:11.7489890Z              CleanReferencedProjects;
+2021-01-03T01:32:11.7490430Z              CleanPublishFolder;
+2021-01-03T01:32:11.7490850Z              AfterClean
+2021-01-03T01:32:11.7491150Z            
+2021-01-03T01:32:11.7491490Z        		" (previous value: "
+2021-01-03T01:32:11.7491900Z              BeforeClean;
+2021-01-03T01:32:11.7492410Z              UnmanagedUnregistration;
+2021-01-03T01:32:11.7492900Z              CoreClean;
+2021-01-03T01:32:11.7493420Z              CleanReferencedProjects;
+2021-01-03T01:32:11.7493990Z              CleanPublishFolder;
+2021-01-03T01:32:11.7494420Z              AfterClean
+2021-01-03T01:32:11.7495100Z            ") at /Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets (123,3)
+2021-01-03T01:32:11.7527260Z        Property reassignment: $(ProjectAssetsCacheFile)="/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/Debug/netstandard2.0/TestProj.assets.cache" (previous value: "obj/Debug/netstandard2.0/TestProj.assets.cache") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets (29,5)
+2021-01-03T01:32:11.7530230Z        Property reassignment: $(ResolveAssemblyReferencesDependsOn)="
+2021-01-03T01:32:11.7530940Z              
+2021-01-03T01:32:11.7531440Z              ResolveProjectReferences;
+2021-01-03T01:32:11.7532160Z              FindInvalidProjectReferences;
+2021-01-03T01:32:11.7532780Z              GetFrameworkPaths;
+2021-01-03T01:32:11.7533340Z              GetReferenceAssemblyPaths;
+2021-01-03T01:32:11.7533900Z              PrepareForBuild;
+2021-01-03T01:32:11.7534400Z              ResolveSDKReferences;
+2021-01-03T01:32:11.7534970Z              ExpandSDKReferences;
+2021-01-03T01:32:11.7535370Z            ;
+2021-01-03T01:32:11.7536000Z              ResolvePackageDependenciesForBuild;
+2021-01-03T01:32:11.7536850Z              _HandlePackageFileConflicts;
+2021-01-03T01:32:11.7537390Z            " (previous value: "
+2021-01-03T01:32:11.7537960Z              ResolveProjectReferences;
+2021-01-03T01:32:11.7538680Z              FindInvalidProjectReferences;
+2021-01-03T01:32:11.7539300Z              GetFrameworkPaths;
+2021-01-03T01:32:11.7539870Z              GetReferenceAssemblyPaths;
+2021-01-03T01:32:11.7540420Z              PrepareForBuild;
+2021-01-03T01:32:11.7540920Z              ResolveSDKReferences;
+2021-01-03T01:32:11.7541450Z              ExpandSDKReferences;
+2021-01-03T01:32:11.7542590Z            ") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets (71,5)
+2021-01-03T01:32:11.7543900Z        Property reassignment: $(PrepareResourcesDependsOn)="
+2021-01-03T01:32:11.7544820Z              ResolvePackageDependenciesForBuild;
+2021-01-03T01:32:11.7545610Z              _HandlePackageFileConflicts;
+2021-01-03T01:32:11.7546080Z              
+2021-01-03T01:32:11.7546340Z              ;
+2021-01-03T01:32:11.7546740Z              PrepareResourceNames;
+2021-01-03T01:32:11.7547230Z              ResGen;
+2021-01-03T01:32:11.7547630Z              CompileLicxFiles
+2021-01-03T01:32:11.7548030Z            
+2021-01-03T01:32:11.7548380Z            " (previous value: "
+2021-01-03T01:32:11.7548730Z              ;
+2021-01-03T01:32:11.7549190Z              PrepareResourceNames;
+2021-01-03T01:32:11.7549660Z              ResGen;
+2021-01-03T01:32:11.7550090Z              CompileLicxFiles
+2021-01-03T01:32:11.7551210Z            ") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets (77,5)
+2021-01-03T01:32:11.7553380Z        Property reassignment: $(DefaultItemExcludes)=";bin\Debug\/**;obj/Debug//**;bin\/**" (previous value: ";bin\Debug\/**;obj/Debug//**") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets (27,5)
+2021-01-03T01:32:11.7555760Z        Property reassignment: $(DefaultItemExcludes)=";bin\Debug\/**;obj/Debug//**;bin\/**;obj//**" (previous value: ";bin\Debug\/**;obj/Debug//**;bin\/**") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets (29,5)
+2021-01-03T01:32:11.7558180Z        Property reassignment: $(DefaultItemExcludes)=";bin\Debug\/**;obj/Debug//**;bin\/**;obj//**;**/*.user" (previous value: ";bin\Debug\/**;obj/Debug//**;bin\/**;obj//**") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets (32,5)
+2021-01-03T01:32:11.7560650Z        Property reassignment: $(DefaultItemExcludes)=";bin\Debug\/**;obj/Debug//**;bin\/**;obj//**;**/*.user;**/*.*proj" (previous value: ";bin\Debug\/**;obj/Debug//**;bin\/**;obj//**;**/*.user") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets (33,5)
+2021-01-03T01:32:11.7563430Z        Property reassignment: $(DefaultItemExcludes)=";bin\Debug\/**;obj/Debug//**;bin\/**;obj//**;**/*.user;**/*.*proj;**/*.sln" (previous value: ";bin\Debug\/**;obj/Debug//**;bin\/**;obj//**;**/*.user;**/*.*proj") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets (34,5)
+2021-01-03T01:32:11.7566190Z        Property reassignment: $(DefaultItemExcludes)=";bin\Debug\/**;obj/Debug//**;bin\/**;obj//**;**/*.user;**/*.*proj;**/*.sln;**/*.vssscc" (previous value: ";bin\Debug\/**;obj/Debug//**;bin\/**;obj//**;**/*.user;**/*.*proj;**/*.sln") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets (35,5)
+2021-01-03T01:32:11.7568140Z        Property reassignment: $(ResolveAssemblyReferencesDependsOn)="
+2021-01-03T01:32:11.7568890Z              
+2021-01-03T01:32:11.7569180Z              
+2021-01-03T01:32:11.7569710Z              ResolveProjectReferences;
+2021-01-03T01:32:11.7570430Z              FindInvalidProjectReferences;
+2021-01-03T01:32:11.7571060Z              GetFrameworkPaths;
+2021-01-03T01:32:11.7571680Z              GetReferenceAssemblyPaths;
+2021-01-03T01:32:11.7572260Z              PrepareForBuild;
+2021-01-03T01:32:11.7572800Z              ResolveSDKReferences;
+2021-01-03T01:32:11.7573330Z              ExpandSDKReferences;
+2021-01-03T01:32:11.7573750Z            ;
+2021-01-03T01:32:11.7574370Z              ResolvePackageDependenciesForBuild;
+2021-01-03T01:32:11.7575200Z              _HandlePackageFileConflicts;
+2021-01-03T01:32:11.7575720Z            ;
+2021-01-03T01:32:11.7576210Z              ResolveTargetingPackAssets;
+2021-01-03T01:32:11.7576810Z            " (previous value: "
+2021-01-03T01:32:11.7577160Z              
+2021-01-03T01:32:11.7577660Z              ResolveProjectReferences;
+2021-01-03T01:32:11.7578380Z              FindInvalidProjectReferences;
+2021-01-03T01:32:11.7579010Z              GetFrameworkPaths;
+2021-01-03T01:32:11.7579650Z              GetReferenceAssemblyPaths;
+2021-01-03T01:32:11.7580240Z              PrepareForBuild;
+2021-01-03T01:32:11.7580780Z              ResolveSDKReferences;
+2021-01-03T01:32:11.7581330Z              ExpandSDKReferences;
+2021-01-03T01:32:11.7581780Z            ;
+2021-01-03T01:32:11.7582410Z              ResolvePackageDependenciesForBuild;
+2021-01-03T01:32:11.7583290Z              _HandlePackageFileConflicts;
+2021-01-03T01:32:11.7584730Z            ") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.FrameworkReferenceResolution.targets (14,5)
+2021-01-03T01:32:11.7588680Z        Property reassignment: $(_GenerateRuntimeConfigurationPropertyInputsCache)="/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/Debug/netstandard2.0/TestProj.genruntimeconfig.cache" (previous value: "obj/Debug/netstandard2.0/TestProj.genruntimeconfig.cache") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets (53,5)
+2021-01-03T01:32:11.7592250Z        Property reassignment: $(_DefaultUserProfileRuntimeStorePath)="/Users/runner/.dotnet/store" (previous value: "/Users/runner") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets (98,5)
+2021-01-03T01:32:11.7593800Z        Property reassignment: $(CoreBuildDependsOn)="
+2021-01-03T01:32:11.7594520Z              _CheckForBuildWithNoBuild;
+2021-01-03T01:32:11.7594980Z              
+2021-01-03T01:32:11.7595400Z              BuildOnlySettings;
+2021-01-03T01:32:11.7595890Z              PrepareForBuild;
+2021-01-03T01:32:11.7596350Z              PreBuildEvent;
+2021-01-03T01:32:11.7596840Z              ResolveReferences;
+2021-01-03T01:32:11.7597320Z              PrepareResources;
+2021-01-03T01:32:11.7597840Z              ResolveKeySource;
+2021-01-03T01:32:11.7598260Z              Compile;
+2021-01-03T01:32:11.7598730Z              ExportWindowsMDFile;
+2021-01-03T01:32:11.7599300Z              UnmanagedUnregistration;
+2021-01-03T01:32:11.7600350Z              GenerateSerializationAssemblies;
+2021-01-03T01:32:11.7601150Z              CreateSatelliteAssemblies;
+2021-01-03T01:32:11.7601740Z              GenerateManifests;
+2021-01-03T01:32:11.7602230Z              GetTargetPath;
+2021-01-03T01:32:11.7602670Z              PrepareForRun;
+2021-01-03T01:32:11.7603480Z              UnmanagedRegistration;
+2021-01-03T01:32:11.7604000Z              IncrementalClean;
+2021-01-03T01:32:11.7604460Z              PostBuildEvent
+2021-01-03T01:32:11.7604860Z            ;
+2021-01-03T01:32:11.7605370Z              GenerateBuildDependencyFile;
+2021-01-03T01:32:11.7606290Z              GenerateBuildRuntimeConfigurationFiles
+2021-01-03T01:32:11.7607000Z            " (previous value: "
+2021-01-03T01:32:11.7607480Z              BuildOnlySettings;
+2021-01-03T01:32:11.7607960Z              PrepareForBuild;
+2021-01-03T01:32:11.7608420Z              PreBuildEvent;
+2021-01-03T01:32:11.7608930Z              ResolveReferences;
+2021-01-03T01:32:11.7609430Z              PrepareResources;
+2021-01-03T01:32:11.7609970Z              ResolveKeySource;
+2021-01-03T01:32:11.7610390Z              Compile;
+2021-01-03T01:32:11.7610860Z              ExportWindowsMDFile;
+2021-01-03T01:32:11.7611440Z              UnmanagedUnregistration;
+2021-01-03T01:32:11.7612180Z              GenerateSerializationAssemblies;
+2021-01-03T01:32:11.7613060Z              CreateSatelliteAssemblies;
+2021-01-03T01:32:11.7613670Z              GenerateManifests;
+2021-01-03T01:32:11.7614140Z              GetTargetPath;
+2021-01-03T01:32:11.7614570Z              PrepareForRun;
+2021-01-03T01:32:11.7615110Z              UnmanagedRegistration;
+2021-01-03T01:32:11.7615630Z              IncrementalClean;
+2021-01-03T01:32:11.7616080Z              PostBuildEvent
+2021-01-03T01:32:11.7616880Z            ") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets (119,5)
+2021-01-03T01:32:11.7617780Z        Property reassignment: $(CoreCleanDependsOn)="
+2021-01-03T01:32:11.7618390Z              _SdkBeforeClean;
+2021-01-03T01:32:11.7618780Z              
+2021-01-03T01:32:11.7619570Z            " (previous value: "") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets (128,5)
+2021-01-03T01:32:11.7620510Z        Property reassignment: $(RebuildDependsOn)="
+2021-01-03T01:32:11.7621130Z              _SdkBeforeRebuild;
+2021-01-03T01:32:11.7621520Z              
+2021-01-03T01:32:11.7621880Z              BeforeRebuild;
+2021-01-03T01:32:11.7622260Z              Clean;
+2021-01-03T01:32:11.7622580Z              Build;
+2021-01-03T01:32:11.7622950Z              AfterRebuild;
+2021-01-03T01:32:11.7623300Z            
+2021-01-03T01:32:11.7623670Z            " (previous value: "
+2021-01-03T01:32:11.7624110Z              BeforeRebuild;
+2021-01-03T01:32:11.7624650Z              Clean;
+2021-01-03T01:32:11.7624960Z              Build;
+2021-01-03T01:32:11.7625350Z              AfterRebuild;
+2021-01-03T01:32:11.7626110Z            ") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets (135,5)
+2021-01-03T01:32:11.7627030Z        Property reassignment: $(CompileDependsOn)="
+2021-01-03T01:32:11.7627510Z              
+2021-01-03T01:32:11.7627910Z              ResolveReferences;
+2021-01-03T01:32:11.7628440Z              ResolveKeySource;
+2021-01-03T01:32:11.7629030Z              SetWin32ManifestProperties;
+2021-01-03T01:32:11.7629910Z              FindReferenceAssembliesForReferences;
+2021-01-03T01:32:11.7630710Z              _GenerateCompileInputs;
+2021-01-03T01:32:11.7631250Z              BeforeCompile;
+2021-01-03T01:32:11.7631770Z              _TimeStampBeforeCompile;
+2021-01-03T01:32:11.7632530Z              _GenerateCompileDependencyCache;
+2021-01-03T01:32:11.7633150Z              CoreCompile;
+2021-01-03T01:32:11.7633650Z              _TimeStampAfterCompile;
+2021-01-03T01:32:11.7634190Z              AfterCompile;
+2021-01-03T01:32:11.7634530Z            ;
+2021-01-03T01:32:11.7634920Z              _CreateAppHost;
+2021-01-03T01:32:11.7635650Z              _CreateComHost;
+2021-01-03T01:32:11.7636100Z              _GetIjwHostPaths;
+2021-01-03T01:32:11.7636550Z            " (previous value: "
+2021-01-03T01:32:11.7637000Z              ResolveReferences;
+2021-01-03T01:32:11.7637500Z              ResolveKeySource;
+2021-01-03T01:32:11.7638340Z              SetWin32ManifestProperties;
+2021-01-03T01:32:11.7639230Z              FindReferenceAssembliesForReferences;
+2021-01-03T01:32:11.7640030Z              _GenerateCompileInputs;
+2021-01-03T01:32:11.7640550Z              BeforeCompile;
+2021-01-03T01:32:11.7641110Z              _TimeStampBeforeCompile;
+2021-01-03T01:32:11.7641830Z              _GenerateCompileDependencyCache;
+2021-01-03T01:32:11.7642480Z              CoreCompile;
+2021-01-03T01:32:11.7643070Z              _TimeStampAfterCompile;
+2021-01-03T01:32:11.7643580Z              AfterCompile;
+2021-01-03T01:32:11.7644350Z            ") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets (432,5)
+2021-01-03T01:32:11.7645500Z        Property reassignment: $(CreateSatelliteAssembliesDependsOn)="
+2021-01-03T01:32:11.7646190Z              
+2021-01-03T01:32:11.7646760Z              _GenerateSatelliteAssemblyInputs;
+2021-01-03T01:32:11.7647760Z              ComputeIntermediateSatelliteAssemblies;
+2021-01-03T01:32:11.7648680Z              GenerateSatelliteAssemblies
+2021-01-03T01:32:11.7649200Z            ;
+2021-01-03T01:32:11.7649760Z              CoreGenerateSatelliteAssemblies
+2021-01-03T01:32:11.7650390Z            " (previous value: "
+2021-01-03T01:32:11.7651020Z              _GenerateSatelliteAssemblyInputs;
+2021-01-03T01:32:11.7651990Z              ComputeIntermediateSatelliteAssemblies;
+2021-01-03T01:32:11.7652880Z              GenerateSatelliteAssemblies
+2021-01-03T01:32:11.7653770Z            ") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets (823,5)
+2021-01-03T01:32:11.7655350Z        Property reassignment: $(DesignerRuntimeImplementationProjectOutputGroupDependsOn)="
+2021-01-03T01:32:11.7656530Z              
+2021-01-03T01:32:11.7656820Z              ;
+2021-01-03T01:32:11.7657110Z              
+2021-01-03T01:32:11.7657420Z              ;
+2021-01-03T01:32:11.7657810Z              BuildOnlySettings;
+2021-01-03T01:32:11.7658290Z              PrepareForBuild;
+2021-01-03T01:32:11.7658820Z              AssignTargetPaths;
+2021-01-03T01:32:11.7659310Z              ResolveReferences
+2021-01-03T01:32:11.7659740Z            
+2021-01-03T01:32:11.7660010Z            ;
+2021-01-03T01:32:11.7660480Z              _GenerateDesignerDepsFile;
+2021-01-03T01:32:11.7661300Z              _GenerateDesignerRuntimeConfigFile;
+2021-01-03T01:32:11.7662150Z              _GatherDesignerShadowCopyFiles;
+2021-01-03T01:32:11.7662760Z            " (previous value: "
+2021-01-03T01:32:11.7663110Z              ;
+2021-01-03T01:32:11.7663390Z              
+2021-01-03T01:32:11.7663670Z              ;
+2021-01-03T01:32:11.7664060Z              BuildOnlySettings;
+2021-01-03T01:32:11.7664580Z              PrepareForBuild;
+2021-01-03T01:32:11.7665080Z              AssignTargetPaths;
+2021-01-03T01:32:11.7665610Z              ResolveReferences
+2021-01-03T01:32:11.7666000Z            
+2021-01-03T01:32:11.7666900Z            ") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.DesignerSupport.targets (21,5)
+2021-01-03T01:32:11.7668670Z        Property reassignment: $(PublishReadyToRunComposite)="false" (previous value: "true") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Publish.targets (20,5)
+2021-01-03T01:32:11.7672090Z        Property reassignment: $(_ShimInputCacheFile)="/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/Debug/netstandard2.0/TestProj.shiminput.cache" (previous value: "obj/Debug/netstandard2.0/TestProj.shiminput.cache") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.PackTool.targets (109,5)
+2021-01-03T01:32:11.7676240Z        Property reassignment: $(_ShimCreatedSentinelFile)="/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/Debug/netstandard2.0/TestProj.shimcreated.sentinel" (previous value: "obj/Debug/netstandard2.0/TestProj.shimcreated.sentinel") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.PackTool.targets (111,5)
+2021-01-03T01:32:11.7689290Z        Property reassignment: $(DefineConstants)="TRACE;DEBUG" (previous value: "TRACE") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.CSharp.targets (31,5)
+2021-01-03T01:32:11.7691390Z        Property reassignment: $(DefineConstants)="TRACE;DEBUG;NETSTANDARD;NETSTANDARD2_0;" (previous value: "TRACE;DEBUG") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.CSharp.targets (34,5)
+2021-01-03T01:32:11.7697310Z        Resolving SDK 'Microsoft.NET.ILLink.Tasks'...
+2021-01-03T01:32:11.7719710Z        Property reassignment: $(SupportedOSPlatformVersion)="7.0" (previous value: "") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Windows.targets (39,5)
+2021-01-03T01:32:11.7721650Z        Property reassignment: $(TargetPlatformMinVersion)="7.0" (previous value: "") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Windows.targets (40,5)
+2021-01-03T01:32:11.7744800Z        Property reassignment: $(MSBuildAllProjects)=";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props;/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets;/Users/runner/.dotnet/sdk/5.0.101/Current/Microsoft.Common.targets/ImportAfter/Microsoft.TestPlatform.ImportAfter.targets;/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.targets;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets;/Users/runner/.dotnet/sdk/5.0.101/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets" (previous value: ";/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.props;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.props;/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets;/Users/runner/.dotnet/sdk/5.0.101/Current/Microsoft.Common.targets/ImportAfter/Microsoft.TestPlatform.ImportAfter.targets;/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/TestProj.csproj.nuget.g.targets;/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets (19,5)
+2021-01-03T01:32:11.7752070Z        Property reassignment: $(PackageDescription)="Package Description" (previous value: "") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets (35,5)
+2021-01-03T01:32:11.7755240Z        Property reassignment: $(GenerateNuspecDependsOn)="Build;_LoadPackInputItems; _GetTargetFrameworksOutput; _WalkEachTargetPerFramework; _GetPackageFiles; " (previous value: "_LoadPackInputItems; _GetTargetFrameworksOutput; _WalkEachTargetPerFramework; _GetPackageFiles; ") at /Users/runner/.dotnet/sdk/5.0.101/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets (60,5)
+2021-01-03T01:32:11.9449890Z        Overriding target "GetTargetFrameworkProperties" in project "/Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets" with target "GetTargetFrameworkProperties" from project "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.Common.targets".
+2021-01-03T01:32:11.9457470Z        Overriding target "ResolveFrameworkReferences" in project "/Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets" with target "ResolveFrameworkReferences" from project "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.FrameworkReferenceResolution.targets".
+2021-01-03T01:32:11.9461960Z        Overriding target "Run" in project "/Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets" with target "Run" from project "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets".
+2021-01-03T01:32:11.9467340Z        Overriding target "GenerateSupportedTargetFrameworkAlias" in project "/Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets" with target "GenerateSupportedTargetFrameworkAlias" from project "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets".
+2021-01-03T01:32:11.9471780Z        Overriding target "GetReferenceAssemblyPaths" in project "/Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets" with target "GetReferenceAssemblyPaths" from project "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.DisableStandardFrameworkResolution.targets".
+2021-01-03T01:32:11.9475980Z        Overriding target "GetFrameworkPaths" in project "/Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets" with target "GetFrameworkPaths" from project "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.DisableStandardFrameworkResolution.targets".
+2021-01-03T01:32:11.9480480Z        Overriding target "DesignerRuntimeImplementationProjectOutputGroup" in project "/Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets" with target "DesignerRuntimeImplementationProjectOutputGroup" from project "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.DesignerSupport.targets".
+2021-01-03T01:32:11.9484310Z        Overriding target "Publish" in project "/Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets" with target "Publish" from project "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Publish.targets".
+2021-01-03T01:32:11.9487380Z        Overriding target "GetCopyToPublishDirectoryItems" in project "/Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets" with target "GetCopyToPublishDirectoryItems" from project "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Publish.targets".
+2021-01-03T01:32:11.9533740Z      1>Project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" on node 1 (default targets).
+2021-01-03T01:32:11.9534690Z      1>Building with tools version "Current".
+2021-01-03T01:32:11.9536540Z        Target "_CheckForUnsupportedTargetFramework" skipped, due to false condition; ('$(_UnsupportedTargetFrameworkError)' == 'true') was evaluated as ('' == 'true').
+2021-01-03T01:32:11.9675010Z      1>Target "_CollectTargetFrameworkForTelemetry" in file "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "_CheckForInvalidConfigurationAndPlatform" depends on it):
+2021-01-03T01:32:11.9677850Z        Using "AllowEmptyTelemetry" task from assembly "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/../tools/net5.0/Microsoft.NET.Build.Tasks.dll".
+2021-01-03T01:32:11.9679000Z        Task "AllowEmptyTelemetry"
+2021-01-03T01:32:11.9718040Z        Done executing task "AllowEmptyTelemetry".
+2021-01-03T01:32:11.9720780Z      1>Done building target "_CollectTargetFrameworkForTelemetry" in project "TestProj.csproj".
+2021-01-03T01:32:11.9725480Z        Target "_CheckForUnsupportedTargetPlatformIdentifier" skipped, due to false condition; ('$(TargetPlatformIdentifier)' != '' and '$(TargetFrameworkIdentifier)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), 5.0))) was evaluated as ('Windows' != '' and '.NETStandard' == '.NETCoreApp' and False).
+2021-01-03T01:32:11.9729080Z        Target "_CheckForUnsupportedNETCoreVersion" skipped, due to false condition; ('$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(NETCoreAppMaximumVersion)' != '') was evaluated as ('.NETStandard' == '.NETCoreApp' And '5.0' != '').
+2021-01-03T01:32:11.9732730Z        Target "_CheckForEolTargetFrameworks" skipped, due to false condition; ('@(_EolNetCoreTargetFrameworkVersions->AnyHaveMetadataValue('Identity', '$(_TargetFrameworkVersionWithoutV)'))' and '$(TargetFrameworkIdentifier)' == '.NETCoreApp' and '$(CheckEolTargetFramework)' == 'true') was evaluated as ('true' and '.NETStandard' == '.NETCoreApp' and 'true' == 'true').
+2021-01-03T01:32:11.9737980Z      1>Target "_CheckForUnsupportedCppNETCoreVersion" in file "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "_CheckForInvalidConfigurationAndPlatform" depends on it):
+2021-01-03T01:32:11.9741660Z        Task "NETSdkError" skipped, due to false condition; ('$(TargetFrameworkIdentifier)' == '.NETCoreApp' and '$(_TargetFrameworkVersionWithoutV)' < '3.1' and '$(Language)' == 'C++') was evaluated as ('.NETStandard' == '.NETCoreApp' and '2.0' < '3.1' and 'C#' == 'C++').
+2021-01-03T01:32:11.9743580Z      1>Done building target "_CheckForUnsupportedCppNETCoreVersion" in project "TestProj.csproj".
+2021-01-03T01:32:11.9746930Z      1>Target "_CheckForUnsupportedNETStandardVersion" in file "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "_CheckForInvalidConfigurationAndPlatform" depends on it):
+2021-01-03T01:32:11.9750330Z        Task "NETSdkError" skipped, due to false condition; ('$(_TargetFrameworkVersionWithoutV)' > '$(NETStandardMaximumVersion)') was evaluated as ('2.0' > '2.1').
+2021-01-03T01:32:11.9751900Z      1>Done building target "_CheckForUnsupportedNETStandardVersion" in project "TestProj.csproj".
+2021-01-03T01:32:11.9754440Z        Target "_CheckForUnsupportedTargetFrameworkAndFeatureCombination" skipped, due to false condition; ('$(TargetFrameworkIdentifier)' == '.NETFramework') was evaluated as ('.NETStandard' == '.NETFramework').
+2021-01-03T01:32:11.9759210Z        Target "_CheckForSupportedOSPlatformVersionHigherThanTargetPlatformVersion" skipped, due to false condition; ('$(TargetPlatformVersion)' != '' and '$(TargetFrameworkIdentifier)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), 5.0))) was evaluated as ('7.0' != '' and '.NETStandard' == '.NETCoreApp' and False).
+2021-01-03T01:32:11.9764130Z        Target "_CheckForInvalidTargetPlatformVersion" skipped, due to false condition; ('$(TargetPlatformVersion)' != '' and '$(TargetFrameworkIdentifier)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), 5.0)) and '$(Language)' != 'C++') was evaluated as ('7.0' != '' and '.NETStandard' == '.NETCoreApp' and False and 'C#' != 'C++').
+2021-01-03T01:32:11.9767450Z        Target "_CheckForUnsupportedAppHostUsage" skipped, due to false condition; ('$(TargetFrameworkIdentifier)' == '.NETCoreApp' and '$(HasRuntimeOutput)' == 'true') was evaluated as ('.NETStandard' == '.NETCoreApp' and '' == 'true').
+2021-01-03T01:32:11.9769950Z        Target "_CheckForUnsupportedHostingUsage" skipped, due to false condition; ('$(TargetFrameworkIdentifier)' == '.NETCoreApp') was evaluated as ('.NETStandard' == '.NETCoreApp').
+2021-01-03T01:32:11.9772120Z        Target "_CheckForMismatchingPlatform" skipped, due to false condition; ('$(RuntimeIdentifier)' != '' and '$(PlatformTarget)' != '') was evaluated as ('' != '' and '' != '').
+2021-01-03T01:32:11.9775780Z      1>Target "_CheckForLanguageAndFeatureCombinationSupport" in file "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.RuntimeIdentifierInference.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "_CheckForInvalidConfigurationAndPlatform" depends on it):
+2021-01-03T01:32:11.9779510Z        Task "NETSdkError" skipped, due to false condition; ('$(Language)' == 'C++' and $(OutputType) != 'library' and '$(TargetFrameworkIdentifier)' == '.NETCoreApp') was evaluated as ('C#' == 'C++' and Library != 'library' and '.NETStandard' == '.NETCoreApp').
+2021-01-03T01:32:11.9781830Z        Task "NETSdkError" skipped, due to false condition; ('$(Language)' == 'C++' and $(EnableComHosting) == 'true') was evaluated as ('C#' == 'C++' and  == 'true').
+2021-01-03T01:32:11.9783390Z        Task "NETSdkError" skipped, due to false condition; ('$(Language)' == 'C++' and $(SelfContained) == 'true') was evaluated as ('C#' == 'C++' and  == 'true').
+2021-01-03T01:32:11.9785090Z      1>Done building target "_CheckForLanguageAndFeatureCombinationSupport" in project "TestProj.csproj".
+2021-01-03T01:32:11.9787450Z        Target "_CheckForNETCoreSdkIsPreview" skipped, due to false condition; ( '$(_NETCoreSdkIsPreview)' == 'true' AND '$(SuppressNETCoreSdkPreviewMessage)' != 'true' ) was evaluated as ( 'false' == 'true' AND '' != 'true' ).
+2021-01-03T01:32:11.9790010Z      1>Target "_GetProjectJsonPath" in file "/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "_GetRestoreProjectStyle" depends on it):
+2021-01-03T01:32:11.9792710Z        Task "GetRestoreProjectJsonPathTask" skipped, due to false condition; ( '$(RestoreProjectStyle)' == 'ProjectJson' OR '$(RestoreProjectStyle)' == '' ) was evaluated as ( 'PackageReference' == 'ProjectJson' OR 'PackageReference' == '' ).
+2021-01-03T01:32:11.9794310Z      1>Done building target "_GetProjectJsonPath" in project "TestProj.csproj".
+2021-01-03T01:32:11.9796460Z        Target "_CheckForUnsupportedNETCoreVersion" skipped, due to false condition; ('$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(NETCoreAppMaximumVersion)' != '') was evaluated as ('.NETStandard' == '.NETCoreApp' And '5.0' != '').
+2021-01-03T01:32:11.9800070Z        Target "_CheckForEolTargetFrameworks" skipped, due to false condition; ('@(_EolNetCoreTargetFrameworkVersions->AnyHaveMetadataValue('Identity', '$(_TargetFrameworkVersionWithoutV)'))' and '$(TargetFrameworkIdentifier)' == '.NETCoreApp' and '$(CheckEolTargetFramework)' == 'true') was evaluated as ('true' and '.NETStandard' == '.NETCoreApp' and 'true' == 'true').
+2021-01-03T01:32:11.9803980Z        Target "_CheckForUnsupportedTargetFrameworkAndFeatureCombination" skipped, due to false condition; ('$(TargetFrameworkIdentifier)' == '.NETFramework') was evaluated as ('.NETStandard' == '.NETFramework').
+2021-01-03T01:32:11.9807200Z        Target "UpdateAspNetToFrameworkReference" skipped, due to false condition; ('$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(_TargetFrameworkVersionWithoutV)' >= '3.0') was evaluated as ('.NETStandard' == '.NETCoreApp' And '2.0' >= '3.0').
+2021-01-03T01:32:11.9810730Z        Target "IncludeTargetingPackReference" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and '$(TargetFrameworkIdentifier)' == '.NETFramework' and '$(AutomaticallyUseReferenceAssemblyPackages)' == 'true') was evaluated as ('.NETStandard,Version=v2.0' != '' and '.NETStandard' == '.NETFramework' and 'true' == 'true').
+2021-01-03T01:32:11.9814860Z      1>Target "CheckForImplicitPackageReferenceOverrides" in file "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "ApplyImplicitVersions" depends on it):
+2021-01-03T01:32:11.9817730Z        Using "CheckForImplicitPackageReferenceOverrides" task from assembly "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/../tools/net5.0/Microsoft.NET.Build.Tasks.dll".
+2021-01-03T01:32:11.9819410Z        Task "CheckForImplicitPackageReferenceOverrides"
+2021-01-03T01:32:11.9820840Z        Done executing task "CheckForImplicitPackageReferenceOverrides".
+2021-01-03T01:32:11.9822250Z      1>Done building target "CheckForImplicitPackageReferenceOverrides" in project "TestProj.csproj".
+2021-01-03T01:32:11.9825090Z      1>Target "ApplyImplicitVersions" in file "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "CollectPackageReferences" depends on it):
+2021-01-03T01:32:11.9827680Z        Using "ApplyImplicitVersions" task from assembly "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/../tools/net5.0/Microsoft.NET.Build.Tasks.dll".
+2021-01-03T01:32:11.9829020Z        Task "ApplyImplicitVersions"
+2021-01-03T01:32:11.9830200Z        Done executing task "ApplyImplicitVersions".
+2021-01-03T01:32:11.9863340Z      1>Done building target "ApplyImplicitVersions" in project "TestProj.csproj".
+2021-01-03T01:32:11.9864640Z        Target "CheckForImplicitPackageReferenceOverrides" skipped. Previously built successfully.
+2021-01-03T01:32:11.9866610Z        Target "ProcessFrameworkReferences" skipped, due to false condition; ('@(FrameworkReference)' != '') was evaluated as ('' != '').
+2021-01-03T01:32:11.9869940Z        Target "_NormalizeTargetPlatformVersion" skipped, due to false condition; ('$(TargetPlatformVersion)' != '' and '$(TargetFrameworkIdentifier)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), 5.0)) and '$(Language)' != 'C++') was evaluated as ('7.0' != '' and '.NETStandard' == '.NETCoreApp' and False and 'C#' != 'C++').
+2021-01-03T01:32:11.9873870Z        Target "IncludeTargetingPackReference" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and '$(TargetFrameworkIdentifier)' == '.NETFramework' and '$(AutomaticallyUseReferenceAssemblyPackages)' == 'true') was evaluated as ('.NETStandard,Version=v2.0' != '' and '.NETStandard' == '.NETFramework' and 'true' == 'true').
+2021-01-03T01:32:11.9878010Z      1>Target "_CheckForObsoleteDotNetCliToolReferences" in file "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.ObsoleteReferences.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "CollectPackageReferences" depends on it):
+2021-01-03T01:32:11.9881100Z        Task "NETSdkWarning" skipped, due to false condition; ( '%(_ReferenceToObsoleteDotNetCliTool.Identity)' != '' ) was evaluated as ( '' != '' ).
+2021-01-03T01:32:11.9882890Z      1>Done building target "_CheckForObsoleteDotNetCliToolReferences" in project "TestProj.csproj".
+2021-01-03T01:32:11.9885240Z      1>Target "CollectPackageReferences" in file "/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "_GetRestoreProjectStyle" depends on it):
+2021-01-03T01:32:11.9886910Z      1>Done building target "CollectPackageReferences" in project "TestProj.csproj".
+2021-01-03T01:32:11.9943610Z      1>Target "_GetRestoreProjectStyle" in file "/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "EnableIntermediateOutputPathMismatchWarning" depends on it):
+2021-01-03T01:32:11.9945680Z        Using "GetRestoreProjectStyleTask" task from assembly "/Users/runner/.dotnet/sdk/5.0.101/NuGet.Build.Tasks.dll".
+2021-01-03T01:32:11.9946670Z        Task "GetRestoreProjectStyleTask"
+2021-01-03T01:32:11.9957820Z          (in) HasPackageReferenceItems 'True'
+2021-01-03T01:32:11.9959130Z          (in) MSBuildProjectDirectory '/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug'
+2021-01-03T01:32:11.9960350Z          (in) MSBuildProjectName 'TestProj'
+2021-01-03T01:32:11.9961200Z          (in) ProjectJsonPath ''
+2021-01-03T01:32:11.9962170Z          (in) RestoreProjectStyle 'PackageReference'
+2021-01-03T01:32:11.9969110Z          (out) IsPackageReferenceCompatibleProjectStyle 'True'
+2021-01-03T01:32:11.9970520Z          (out) ProjectStyle 'PackageReference'
+2021-01-03T01:32:11.9971300Z        Done executing task "GetRestoreProjectStyleTask".
+2021-01-03T01:32:11.9972260Z      1>Done building target "_GetRestoreProjectStyle" in project "TestProj.csproj".
+2021-01-03T01:32:11.9974880Z      1>Target "EnableIntermediateOutputPathMismatchWarning" in file "/Users/runner/.dotnet/sdk/5.0.101/NuGet.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "_CheckForInvalidConfigurationAndPlatform" depends on it):
+2021-01-03T01:32:11.9977770Z      1>Done building target "EnableIntermediateOutputPathMismatchWarning" in project "TestProj.csproj".
+2021-01-03T01:32:11.9979350Z        Target "ApplyImplicitVersions" skipped. Previously built successfully.
+2021-01-03T01:32:11.9980880Z        Target "WarnForExplicitVersions" skipped, due to false condition; ('@(SdkBuildWarning)' != '') was evaluated as ('' != '').
+2021-01-03T01:32:11.9982240Z        Target "CheckForImplicitPackageReferenceOverrides" skipped. Previously built successfully.
+2021-01-03T01:32:11.9985410Z      1>Target "CheckForDuplicateItems" in file "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "_CheckForInvalidConfigurationAndPlatform" depends on it):
+2021-01-03T01:32:11.9988080Z        Using "CheckForDuplicateItems" task from assembly "/Users/runner/.dotnet/sdk/5.0.101/Sdks/Microsoft.NET.Sdk/targets/../tools/net5.0/Microsoft.NET.Build.Tasks.dll".
+2021-01-03T01:32:11.9989240Z        Task "CheckForDuplicateItems"
+2021-01-03T01:32:11.9993090Z        Done executing task "CheckForDuplicateItems".
+2021-01-03T01:32:11.9994010Z        Task "CheckForDuplicateItems"
+2021-01-03T01:32:11.9995640Z        Done executing task "CheckForDuplicateItems".
+2021-01-03T01:32:11.9996510Z        Task "CheckForDuplicateItems"
+2021-01-03T01:32:11.9997910Z        Done executing task "CheckForDuplicateItems".
+2021-01-03T01:32:11.9999270Z      1>Done building target "CheckForDuplicateItems" in project "TestProj.csproj".
+2021-01-03T01:32:12.0001250Z        Target "_CheckForFailedSDKResolution" skipped, due to false condition; ('$(SdkResolverHonoredGlobalJson)' == 'false') was evaluated as ('' == 'false').
+2021-01-03T01:32:12.0005200Z        Target "_CheckForInvalidWindowsDesktopTargetingConfiguration" skipped, due to false condition; ('$(TargetFrameworkIdentifier)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals($(_TargetFrameworkVersionWithoutV), '5.0')) and ('$(UseWindowsForms)' == 'true' or '$(UseWPF)' == 'true')) was evaluated as ('.NETStandard' == '.NETCoreApp' and False and ('' == 'true' or '' == 'true')).
+2021-01-03T01:32:12.0010280Z        Target "_CheckForUnnecessaryWindowsDesktopSDK" skipped, due to false condition; ('$(TargetFrameworkIdentifier)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals($(_TargetFrameworkVersionWithoutV), '5.0')) and '$(_MicrosoftWindowsDesktopSdkImported)' == 'true' and '$(TargetFrameworks)' == '') was evaluated as ('.NETStandard' == '.NETCoreApp' and False and '' == 'true' and '' == '').
+2021-01-03T01:32:12.0013650Z        Target "ProcessFrameworkReferences" skipped, due to false condition; ('@(FrameworkReference)' != '') was evaluated as ('' != '').
+2021-01-03T01:32:12.0017060Z        Target "_NormalizeTargetPlatformVersion" skipped, due to false condition; ('$(TargetPlatformVersion)' != '' and '$(TargetFrameworkIdentifier)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), 5.0)) and '$(Language)' != 'C++') was evaluated as ('7.0' != '' and '.NETStandard' == '.NETCoreApp' and False and 'C#' != 'C++').
+2021-01-03T01:32:12.0021050Z        Target "IncludeTargetingPackReference" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and '$(TargetFrameworkIdentifier)' == '.NETFramework' and '$(AutomaticallyUseReferenceAssemblyPackages)' == 'true') was evaluated as ('.NETStandard,Version=v2.0' != '' and '.NETStandard' == '.NETFramework' and 'true' == 'true').
+2021-01-03T01:32:12.0024880Z      1>Target "_CheckForInvalidConfigurationAndPlatform" in file "/Users/runner/.dotnet/sdk/5.0.101/Microsoft.Common.CurrentVersion.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "Antlr4GetBuildDeps" depends on it):
+2021-01-03T01:32:12.0027390Z        Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+2021-01-03T01:32:12.0029280Z        Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+2021-01-03T01:32:12.0030870Z        Using "Message" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+2021-01-03T01:32:12.0031710Z        Task "Message"
+2021-01-03T01:32:12.0032090Z          Configuration=Debug
+2021-01-03T01:32:12.0032520Z        Done executing task "Message".
+2021-01-03T01:32:12.0032940Z        Task "Message"
+2021-01-03T01:32:12.0033290Z          Platform=AnyCPU
+2021-01-03T01:32:12.0033700Z        Done executing task "Message".
+2021-01-03T01:32:12.0035230Z        Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('bin\Debug\netstandard2.0\' != '' and !HasTrailingSlash('bin\Debug\netstandard2.0\')).
+2021-01-03T01:32:12.0037460Z        Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj/' != '' and !HasTrailingSlash('obj/')).
+2021-01-03T01:32:12.0039980Z        Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('obj/Debug/netstandard2.0/' != '' and !HasTrailingSlash('obj/Debug/netstandard2.0/')).
+2021-01-03T01:32:12.0043580Z        Task "Error" skipped, due to false condition; ( '$(_InitialMSBuildProjectExtensionsPath)' != '' And '$(MSBuildProjectExtensionsPath)' != '$(_InitialMSBuildProjectExtensionsPath)' ) was evaluated as ( '/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/' != '' And '/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/' != '/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/' ).
+2021-01-03T01:32:12.0048300Z        Task "Warning" skipped, due to false condition; ( '$(EnableBaseIntermediateOutputPathMismatchWarning)' == 'true' And '$(_InitialBaseIntermediateOutputPath)' != '$(BaseIntermediateOutputPath)' And '$(BaseIntermediateOutputPath)' != '$(MSBuildProjectExtensionsPath)' ) was evaluated as ( 'true' == 'true' And 'obj/' != 'obj/' And 'obj/' != '/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/obj/' ).
+2021-01-03T01:32:12.0051240Z      1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "TestProj.csproj".
+2021-01-03T01:32:12.0053650Z      1>Target "Antlr4GetBuildDeps" in file "/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "Build" depends on it):
+2021-01-03T01:32:12.0054960Z        Task "Message"
+2021-01-03T01:32:12.0056260Z          Tasks for Antlr in '/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/../lib/netstandard2.0\Antlr4BuildTasks.dll'
+2021-01-03T01:32:12.0057100Z        Done executing task "Message".
+2021-01-03T01:32:12.0057980Z        Using "GetJava" task from assembly "/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/../lib/netstandard2.0/Antlr4BuildTasks.dll".
+2021-01-03T01:32:12.0058790Z        Task "GetJava"
+2021-01-03T01:32:12.0492480Z        Done executing task "GetJava".
+2021-01-03T01:32:12.0493030Z        Task "Message"
+2021-01-03T01:32:12.0495930Z          The output from GetJava task is '/usr/bin/java'
+2021-01-03T01:32:12.0496510Z        Done executing task "Message".
+2021-01-03T01:32:12.0497440Z        Using "GetAntlrJar" task from assembly "/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/../lib/netstandard2.0/Antlr4BuildTasks.dll".
+2021-01-03T01:32:12.0498320Z        Task "GetAntlrJar"
+2021-01-03T01:32:12.1337900Z          Probing file:////Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.1342040Z          Local path \\users\runner\.nuget\packages\antlr4buildtasks\8.9.0\build\antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.1344030Z          Probing file:////Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/antlr-4.9-complete.jar
+2021-01-03T01:32:12.1345440Z          Local path \\users\runner\.nuget\packages\antlr4buildtasks\8.9.0\build\antlr-4.9-complete.jar
+2021-01-03T01:32:12.1346490Z          Probing 
+2021-01-03T01:32:12.1347590Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.9/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.1355110Z          Downloading 
+2021-01-03T01:32:12.1356300Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.9/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.5306680Z          Probing 
+2021-01-03T01:32:12.5308660Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.9/antlr-4.9-complete.jar
+2021-01-03T01:32:12.5310320Z          Downloading 
+2021-01-03T01:32:12.5312640Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.9/antlr-4.9-complete.jar
+2021-01-03T01:32:12.5534500Z          Probing 
+2021-01-03T01:32:12.5537570Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.8-1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.5549550Z          Downloading 
+2021-01-03T01:32:12.5551100Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.8-1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.5744210Z          Probing 
+2021-01-03T01:32:12.5745550Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.8-1/antlr-4.9-complete.jar
+2021-01-03T01:32:12.5746300Z          Downloading 
+2021-01-03T01:32:12.5747390Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.8-1/antlr-4.9-complete.jar
+2021-01-03T01:32:12.7135710Z          Probing 
+2021-01-03T01:32:12.7138410Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.8/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.7140400Z          Downloading 
+2021-01-03T01:32:12.7142450Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.8/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.7729440Z          Probing 
+2021-01-03T01:32:12.7743210Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.8/antlr-4.9-complete.jar
+2021-01-03T01:32:12.7744820Z          Downloading 
+2021-01-03T01:32:12.7746320Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.8/antlr-4.9-complete.jar
+2021-01-03T01:32:12.7935070Z          Probing 
+2021-01-03T01:32:12.7937860Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7.2/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.7949080Z          Downloading 
+2021-01-03T01:32:12.7951070Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7.2/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.8138570Z          Probing 
+2021-01-03T01:32:12.8149340Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7.2/antlr-4.9-complete.jar
+2021-01-03T01:32:12.8150870Z          Downloading 
+2021-01-03T01:32:12.8152500Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7.2/antlr-4.9-complete.jar
+2021-01-03T01:32:12.8375940Z          Probing 
+2021-01-03T01:32:12.8378890Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7.1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.8380770Z          Downloading 
+2021-01-03T01:32:12.8382860Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7.1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.8581250Z          Probing 
+2021-01-03T01:32:12.8584120Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7.1/antlr-4.9-complete.jar
+2021-01-03T01:32:12.8585270Z          Downloading 
+2021-01-03T01:32:12.8586850Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7.1/antlr-4.9-complete.jar
+2021-01-03T01:32:12.8762560Z          Probing 
+2021-01-03T01:32:12.8764980Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.8766820Z          Downloading 
+2021-01-03T01:32:12.8768910Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.8998340Z          Probing 
+2021-01-03T01:32:12.9004540Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7/antlr-4.9-complete.jar
+2021-01-03T01:32:12.9005800Z          Downloading 
+2021-01-03T01:32:12.9008250Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.7/antlr-4.9-complete.jar
+2021-01-03T01:32:12.9211070Z          Probing 
+2021-01-03T01:32:12.9216860Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.6/antlr-4.9.0-complete.jar
+2021-01-03T01:32:12.9218850Z          Downloading 
+2021-01-03T01:32:12.9220740Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.6/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.0223880Z          Probing 
+2021-01-03T01:32:13.0226640Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.6/antlr-4.9-complete.jar
+2021-01-03T01:32:13.0228510Z          Downloading 
+2021-01-03T01:32:13.0230190Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.6/antlr-4.9-complete.jar
+2021-01-03T01:32:13.0419000Z          Probing 
+2021-01-03T01:32:13.0434250Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.3/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.0435070Z          Downloading 
+2021-01-03T01:32:13.0436170Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.3/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.0609110Z          Probing 
+2021-01-03T01:32:13.0611560Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.3/antlr-4.9-complete.jar
+2021-01-03T01:32:13.0613540Z          Downloading 
+2021-01-03T01:32:13.0615740Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.3/antlr-4.9-complete.jar
+2021-01-03T01:32:13.0812430Z          Probing 
+2021-01-03T01:32:13.0825740Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.2-1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.0826520Z          Downloading 
+2021-01-03T01:32:13.0827650Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.2-1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.0996050Z          Probing 
+2021-01-03T01:32:13.0997530Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.2-1/antlr-4.9-complete.jar
+2021-01-03T01:32:13.0998260Z          Downloading 
+2021-01-03T01:32:13.0999360Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.2-1/antlr-4.9-complete.jar
+2021-01-03T01:32:13.1183760Z          Probing 
+2021-01-03T01:32:13.1186590Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.2/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.1188460Z          Downloading 
+2021-01-03T01:32:13.1190680Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.2/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.1368230Z          Probing 
+2021-01-03T01:32:13.1370900Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.2/antlr-4.9-complete.jar
+2021-01-03T01:32:13.1373220Z          Downloading 
+2021-01-03T01:32:13.1375050Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.2/antlr-4.9-complete.jar
+2021-01-03T01:32:13.1583400Z          Probing 
+2021-01-03T01:32:13.1585780Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.1-1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.1587520Z          Downloading 
+2021-01-03T01:32:13.1589620Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.1-1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.1794080Z          Probing 
+2021-01-03T01:32:13.1796770Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.1-1/antlr-4.9-complete.jar
+2021-01-03T01:32:13.1798420Z          Downloading 
+2021-01-03T01:32:13.1800040Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.1-1/antlr-4.9-complete.jar
+2021-01-03T01:32:13.2570360Z          Probing 
+2021-01-03T01:32:13.2573710Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.2575770Z          Downloading 
+2021-01-03T01:32:13.2577690Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.2765920Z          Probing 
+2021-01-03T01:32:13.2767720Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.1/antlr-4.9-complete.jar
+2021-01-03T01:32:13.2768470Z          Downloading 
+2021-01-03T01:32:13.2769550Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5.1/antlr-4.9-complete.jar
+2021-01-03T01:32:13.3260700Z          Probing 
+2021-01-03T01:32:13.3262660Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.3265030Z          Downloading 
+2021-01-03T01:32:13.3266720Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.3445680Z          Probing 
+2021-01-03T01:32:13.3447050Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5/antlr-4.9-complete.jar
+2021-01-03T01:32:13.3447790Z          Downloading 
+2021-01-03T01:32:13.3448860Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.5/antlr-4.9-complete.jar
+2021-01-03T01:32:13.3714570Z          Probing 
+2021-01-03T01:32:13.3716060Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.3/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.3716800Z          Downloading 
+2021-01-03T01:32:13.3717890Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.3/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.3897410Z          Probing 
+2021-01-03T01:32:13.3898770Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.3/antlr-4.9-complete.jar
+2021-01-03T01:32:13.3899500Z          Downloading 
+2021-01-03T01:32:13.3900840Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.3/antlr-4.9-complete.jar
+2021-01-03T01:32:13.4110600Z          Probing 
+2021-01-03T01:32:13.4111920Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2.2/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.4112750Z          Downloading 
+2021-01-03T01:32:13.4113850Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2.2/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.4328680Z          Probing 
+2021-01-03T01:32:13.4330020Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2.2/antlr-4.9-complete.jar
+2021-01-03T01:32:13.4330760Z          Downloading 
+2021-01-03T01:32:13.4331850Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2.2/antlr-4.9-complete.jar
+2021-01-03T01:32:13.4509220Z          Probing 
+2021-01-03T01:32:13.4510510Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2.1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.4511230Z          Downloading 
+2021-01-03T01:32:13.4512450Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2.1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.4725700Z          Probing 
+2021-01-03T01:32:13.4727020Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2.1/antlr-4.9-complete.jar
+2021-01-03T01:32:13.4727740Z          Downloading 
+2021-01-03T01:32:13.4728810Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2.1/antlr-4.9-complete.jar
+2021-01-03T01:32:13.5151340Z          Probing 
+2021-01-03T01:32:13.5152950Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.5153690Z          Downloading 
+2021-01-03T01:32:13.5154880Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.5353510Z          Probing 
+2021-01-03T01:32:13.5354940Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2/antlr-4.9-complete.jar
+2021-01-03T01:32:13.5355670Z          Downloading 
+2021-01-03T01:32:13.5356710Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.2/antlr-4.9-complete.jar
+2021-01-03T01:32:13.5552460Z          Probing 
+2021-01-03T01:32:13.5553900Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.5554770Z          Downloading 
+2021-01-03T01:32:13.5555820Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.1/antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.5762920Z          Probing 
+2021-01-03T01:32:13.5766430Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.1/antlr-4.9-complete.jar
+2021-01-03T01:32:13.5769330Z          Downloading 
+2021-01-03T01:32:13.5772420Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.1/antlr-4.9-complete.jar
+2021-01-03T01:32:13.5965350Z          Probing 
+2021-01-03T01:32:13.5966010Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.0/
+2021-01-03T01:32:13.5967180Z              /antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.5967640Z          Downloading 
+2021-01-03T01:32:13.5968200Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.0/
+2021-01-03T01:32:13.5969170Z              /antlr-4.9.0-complete.jar
+2021-01-03T01:32:13.6164350Z          Probing 
+2021-01-03T01:32:13.6166070Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.0/
+2021-01-03T01:32:13.6169550Z              /antlr-4.9-complete.jar
+2021-01-03T01:32:13.6170940Z          Downloading 
+2021-01-03T01:32:13.6172540Z                https://repo1.maven.org/maven2/org/antlr/antlr4/4.0/
+2021-01-03T01:32:13.6175400Z              /antlr-4.9-complete.jar
+2021-01-03T01:32:13.6390000Z        Done executing task "GetAntlrJar".
+2021-01-03T01:32:13.6392560Z        Task "Message"
+2021-01-03T01:32:13.6394170Z          The output from GetAntlrJar task is ''
+2021-01-03T01:32:13.6395260Z        Done executing task "Message".
+2021-01-03T01:32:13.6397080Z      1>Done building target "Antlr4GetBuildDeps" in project "TestProj.csproj".
+2021-01-03T01:32:13.6399400Z        Target "Antlr4CompileReadGeneratedFileList" skipped, due to false condition; (Exists($(Antlr4ToCompileListFile))) was evaluated as (Exists(obj/Debug/netstandard2.0/TestProj.csproj.AntlrToCompileList.txt)).
+2021-01-03T01:32:13.6407060Z      1>Target "Antlr4Compile" in file "/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets" from project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (target "Build" depends on it):
+2021-01-03T01:32:13.6409000Z        Building target "Antlr4Compile" completely.
+2021-01-03T01:32:13.6410590Z        Output file "obj/Debug/netstandard2.0/TestProj.csproj.AntlrToCompileList.txt" does not exist.
+2021-01-03T01:32:13.6412120Z        Task "Message"
+2021-01-03T01:32:13.6414000Z          Running the Java Antlr Tool over the grammar files 'CombinedGrammar.g4;SplitGrammarLexer.g4;SplitGrammarParser.g4'.
+2021-01-03T01:32:13.6415520Z        Done executing task "Message".
+2021-01-03T01:32:13.6419280Z        Using "RunAntlrTool" task from assembly "/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/../lib/netstandard2.0/Antlr4BuildTasks.dll".
+2021-01-03T01:32:13.6420730Z        Task "RunAntlrTool"
+2021-01-03T01:32:13.6492440Z          Starting Antlr4 Build Tasks. ToolPath is ""
+2021-01-03T01:32:13.6494380Z          Note AntOutDir is empty. Placing generated files in IntermediateOutputPath obj/Debug/netstandard2.0/
+2021-01-03T01:32:13.6496170Z          JavaExec is "/usr/bin/java"
+2021-01-03T01:32:13.7008920Z          Which OS??   at Antlr4.Build.Tasks.RunAntlrTool.Execute()
+2021-01-03T01:32:13.7026490Z      1>/Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets(193,3): error MSB4181: The "RunAntlrTool" task returned false but did not log an error. [/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj]
+2021-01-03T01:32:13.7028950Z        Done executing task "RunAntlrTool" -- FAILED.
+2021-01-03T01:32:13.7030140Z      1>Done building target "Antlr4Compile" in project "TestProj.csproj" -- FAILED.
+2021-01-03T01:32:13.7031560Z      1>Done Building Project "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (default targets) -- FAILED.
+2021-01-03T01:32:13.7093310Z 
+2021-01-03T01:32:13.7093880Z Build FAILED.
+2021-01-03T01:32:13.7096950Z 
+2021-01-03T01:32:13.7098650Z        "/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj" (default target) (1) ->
+2021-01-03T01:32:13.7099810Z        (Antlr4Compile target) -> 
+2021-01-03T01:32:13.7101640Z          /Users/runner/.nuget/packages/antlr4buildtasks/8.9.0/build/Antlr4BuildTasks.targets(193,3): error MSB4181: The "RunAntlrTool" task returned false but did not log an error. [/Users/runner/work/antlr4-linux-bug/antlr4-linux-bug/TestProj.csproj]
+2021-01-03T01:32:13.7103010Z 
+2021-01-03T01:32:13.7103290Z     0 Warning(s)
+2021-01-03T01:32:13.7103780Z     1 Error(s)
+2021-01-03T01:32:13.7103970Z 
+2021-01-03T01:32:13.7104270Z Time Elapsed 00:00:02.17
+2021-01-03T01:32:13.8720260Z ##[error]Process completed with exit code 1.
