@@ -3,9 +3,17 @@
   <PropertyGroup>
     <!-- The absolute path to the root of the repository. Includes the final backslash in the path. -->
     <RepoRootDir>$([System.IO.Path]::GetFullPath("$(MSBuildThisFileDirectory)"))</RepoRootDir>
+
     <LibsDir>$(RepoRootDir)libs/</LibsDir>
+    <ScriptsDir>$(RepoRootDir)scripts/</ScriptsDir>
+    <DocsDir>$(RepoRootDir)docs/</DocsDir>
     <ArtifactsDir>$(RepoRootDir)artifacts/</ArtifactsDir>
+
     <BuildOutputDir>$(ArtifactsDir)builds/</BuildOutputDir>
+    <PackageOutputPath>$(ArtifactsDir)pkgs/</PackageOutputPath>
+    <PublishRootDir>$(ArtifactsDir)publish/</PublishRootDir>
+    <PublishDir>$(PublishRootDir)</PublishDir>
+
     <BaseOutputPath>$(BuildOutputDir)$(MSBuildProjectName)/bin</BaseOutputPath>
     <BaseIntermediateOutputPath>$(BuildOutputDir)$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
     <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
