@@ -35,7 +35,7 @@ jobs:
         run: dotnet restore # --verbosity detailed
       
       - name: .NET Build
-        run: dotnet build --no-restore --verbosity detailed
+        run: dotnet build -c Release --no-restore --verbosity detailed
 
       - name: Dump environment
         if: always()
