@@ -32,10 +32,10 @@ jobs:
       #  uses: actions/setup-dotnet@v1
 
       - name: .NET Restore
-        run: dotnet restore Test.sln # --verbosity detailed
+        run: dotnet restore # --verbosity detailed
       
       - name: .NET Build
-        run: dotnet build Test.sln -c Release --no-restore --verbosity detailed
+        run: dotnet build -c Release --no-restore --verbosity diag #detailed
 
       - name: Dump environment
         if: always()
