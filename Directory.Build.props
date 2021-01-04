@@ -7,7 +7,7 @@
     <LibsDir>$(RepoRootDir)libs/</LibsDir>
     <ScriptsDir>$(RepoRootDir)scripts/</ScriptsDir>
     <DocsDir>$(RepoRootDir)docs/</DocsDir>
-    <ArtifactsDir>./artifacts/</ArtifactsDir>
+    <ArtifactsDir>$(RepoRootDir)artifacts/</ArtifactsDir>
 
     <BuildOutputDir>$(ArtifactsDir)builds/</BuildOutputDir>
     <PackageOutputPath>$(ArtifactsDir)pkgs/</PackageOutputPath>
